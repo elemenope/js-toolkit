@@ -203,6 +203,18 @@ utilities.listCreate = function(arr){
   } 
 return (obj); 
 } 
+  
+
+//A function that will check an object to see if it has a nested object within it, and will return the name value.  
+  
+utilities.objHasNested = function(obj){
+  let key;
+  for (key in obj){
+    if (obj[key] == "[object Object]"){
+      return key;
+    }
+  }
+}
 
 window.utilities = utilities;
 
