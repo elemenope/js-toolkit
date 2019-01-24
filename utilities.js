@@ -215,6 +215,20 @@ utilities.objHasNested = function(obj){
     }
   }
 }
+  
+//A function that will sum the parts of an array, remember to pass the array as a parameter.
+  
+utilities.summedArray = function(arr){
+  arr.map(function() {
+    let num = arr[0];
+    while (arr.length > 1){
+    num += arr[1];
+    arr = arr.splice(1, arr.length-1);
+    }
+  return console.log(num);
+  });
+}
+
 
 window.utilities = utilities;
 
